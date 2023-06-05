@@ -18,6 +18,8 @@
     gap: 48px;
 
     & > div > a {
+      all: unset;
+      cursor: pointer;
       color: $white;
       text-transform: uppercase;
       text-decoration: none;
@@ -61,6 +63,7 @@
 
     &__menu {
       display: block;
+      all: unset;
       cursor: pointer;
       will-change: filter;
       transition: filter 300ms;
