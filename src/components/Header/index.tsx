@@ -1,5 +1,5 @@
 import { useReducer } from 'react'
-import { Menu } from '@mui/icons-material'
+import { MenuOpen, Menu } from '@mui/icons-material'
 import myLogo from '/icons/dp-icon.svg'
 import styles from './index.module.scss'
 
@@ -12,7 +12,7 @@ const Header = () => {
         <img src={myLogo} alt="My logo" />
       </div>
       <div className={styles.header__menu} onClick={toggleMenu}>
-        <Menu />
+        { toggle ? <MenuOpen /> : <Menu />}
       </div>
       <div className={[styles.header__links, toggle ? styles['header__links--is-show'] : ''].join(' ')}>
         <div>
