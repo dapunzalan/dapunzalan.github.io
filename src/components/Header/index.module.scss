@@ -1,0 +1,33 @@
+@import './../../assets/colors';
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  padding: 16px 48px;
+
+  &__logo {
+    & > img {
+      height: 64px;
+    }
+  }
+
+  &__links {
+    display: inherit;
+    flex-wrap: nowrap;
+    gap: 48px;
+
+    & > div > a {
+      color: $white;
+      text-transform: uppercase;
+      text-decoration: none;
+      will-change: filter;
+      transition: filter 300ms;
+
+      &:hover {
+        color: $green-color;
+        filter: drop-shadow(0 0 2em $green-color);
+      }
+    }
+  }
+}
