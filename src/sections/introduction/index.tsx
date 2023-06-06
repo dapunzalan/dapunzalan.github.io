@@ -26,6 +26,7 @@ const Wrapper = styled.div<{delay: string}>`
 const Description = styled(motion.p)`
   font-size: 1rem;
   max-width: 34rem;
+  white-space: break-spaces;
 `;
 
 const SocialMedia = styled.div`
