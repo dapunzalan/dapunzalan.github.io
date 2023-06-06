@@ -3,12 +3,9 @@ import AnimateTitle from '../../components/AnimateTitle'
 import styled from 'styled-components'
 import styles from './index.module.scss'
 import useAnimateIn from '../../hooks/useAnimateIn'
+import { Facebook, Instagram, LinkedIn, Twitter } from '../../components/Icons'
 
 const Wrapper = styled.div<{delay: string}>`
-  & > p {
-    font-size: 1rem;
-  }
-
   @keyframes appear {
     from {
       opacity: 0;
@@ -29,6 +26,34 @@ const Description = styled(motion.p)`
   max-width: 34rem;
 `;
 
+const SocialMedia = styled.div`
+  margin-top: 24px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 48px;
+  align-items: center;
+
+  & > a > svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  @media screen and (max-width: 600px) {
+    justify-content: center;
+  }
+`
+
+const Item = styled.a`
+  position: relative;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent;
+  transition: all 0.3s;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+`;
+
 const Introduction = () => {
   // Intro animation
   const {
@@ -45,7 +70,14 @@ const Introduction = () => {
       <div className={styles.introduction__info}>
         <div>
           <Wrapper delay="0.6s">
-            <p>Hello I'm</p>
+            <Description
+              ref={introRef}
+              initial="hidden"
+              animate={introCtrls}
+              variants={introVars}
+              >
+              Hello I'm
+            </Description>
           </Wrapper>
           <Wrapper delay="0.7s">
             <AnimateTitle title="Dexter Ariel Punzalan" />
@@ -62,9 +94,41 @@ const Introduction = () => {
               company brand styles and business needs.      
             </Description>
           </Wrapper>
+          <Wrapper delay="1.4s">
+            <SocialMedia>
+              <Item
+                href="https://www.facebook.com/dexteridiculous"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <Facebook color="#FFFFFF" />
+              </Item>
+              <Item
+                href="https://twitter.com/dexteridiculous"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <Twitter color="#FFFFFF" />
+              </Item>
+              <Item
+                href="https://www.instagram.com/_dexyzzz"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <Instagram color="#FFFFFF" />
+              </Item>
+              <Item
+                href="https://www.linkedin.com/in/dapunzalan/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <LinkedIn color="#FFFFFF" />
+              </Item>
+            </SocialMedia>
+          </Wrapper>
         </div>
       </div>
-      <Wrapper delay="0.9s">
+      <Wrapper delay="1.5s">
         <div className={styles.introduction__profile}>
           <img src="/images/profile-black.png" alt="profile" />
         </div>

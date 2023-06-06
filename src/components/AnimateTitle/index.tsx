@@ -6,7 +6,6 @@ import { useInView } from 'react-intersection-observer';
 const Title = styled.h2`
   font-size: 4.5rem;
   line-height: 1;
-  margin: 16px 0;
 
   @media (min-width: 1200px) {
     font-size: 5rem;

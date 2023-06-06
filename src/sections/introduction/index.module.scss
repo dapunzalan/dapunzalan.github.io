@@ -11,6 +11,12 @@
     height: 506px;
     display: flex;
     align-items: center;
+
+    & > div {
+      display: inherit;
+      flex-direction: column;
+      gap: 16px;
+    }
   }
 
   &__profile {
