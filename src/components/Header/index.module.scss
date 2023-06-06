@@ -67,6 +67,8 @@
       cursor: pointer;
       will-change: filter;
       transition: filter 300ms;
+      -webkit-tap-highlight-color: rgba(0,0,0,0);
+      -webkit-tap-highlight-color: transparent;
 
       &:hover {
         color: $green-color;

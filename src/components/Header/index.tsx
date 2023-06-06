@@ -24,7 +24,7 @@ const Nav = styled.nav`
   width: 100%;
   z-index: 9999;
 
-  @media (min-width: 800px) {
+  @media (min-width: 600px) {
     align-self: center;
     background: none;
     flex-direction: row;
@@ -93,6 +93,8 @@ const AnchorItem = styled(AnchorLink)<any>`
   will-change: filter;
   transition: filter 300ms;
   margin: 0 24px;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent;
 
   &:hover {
     color: #03C988;
@@ -116,7 +118,7 @@ const Header = () => {
         <Nav>
           <Wrapper delay="0.5s">
             <AnchorItem
-              href="#Me"
+              href="#"
               offset="160"
             >
               Me
@@ -124,7 +126,7 @@ const Header = () => {
           </Wrapper>
           <Wrapper delay="0.6s">
             <AnchorItem
-              href="#Skills"
+              href="#"
               offset="160"
             >
               Skills
@@ -132,7 +134,7 @@ const Header = () => {
           </Wrapper>
           <Wrapper delay="0.7s">
             <AnchorItem
-              href="#Me"
+              href="#"
               offset="160"
             >
               Projects
@@ -140,7 +142,7 @@ const Header = () => {
           </Wrapper>
           <Wrapper delay="0.8s">
             <AnchorItem
-              href="#footer"
+              href="#"
               delay="0.8s"
             >
               Education
