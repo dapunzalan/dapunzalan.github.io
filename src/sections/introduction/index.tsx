@@ -6,7 +6,7 @@ import useAnimateIn from '../../hooks/useAnimateIn'
 
 const Wrapper = styled.div<{delay: string}>`
   & > p {
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
 
   @keyframes appear {
@@ -25,9 +25,8 @@ const Wrapper = styled.div<{delay: string}>`
 `;
 
 const Description = styled(motion.p)`
-  font-size: 1.25rem;
-  line-height: 1.25;
-  max-width: 30rem;
+  font-size: 1rem;
+  max-width: 34rem;
 `;
 
 const Introduction = () => {
