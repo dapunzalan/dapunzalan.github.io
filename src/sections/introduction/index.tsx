@@ -66,7 +66,7 @@ const Introduction = () => {
       </div>
       <Wrapper delay="0.9s">
         <div className={styles.introduction__profile}>
-          <img src="/images/profile.png" alt="profile" />
+          <img src="/images/profile-black.png" alt="profile" />
         </div>
       </Wrapper>
     </div>

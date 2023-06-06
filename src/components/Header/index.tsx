@@ -6,7 +6,7 @@ import myLogo from '/icons/dp-icon.svg'
 import styles from './index.module.scss'
 
 const Nav = styled.nav`
-  background-color: #212A3E;
+  background-color: #000000;
   display: flex;
   flex-direction: column;
   font-size: 2rem;
