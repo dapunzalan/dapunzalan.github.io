@@ -6,6 +6,8 @@ import useAnimateIn from '../../hooks/useAnimateIn'
 import { Facebook, Instagram, LinkedIn, Twitter } from '../../components/Icons'
 
 const Wrapper = styled.div<{delay: string}>`
+  text-wrap: wrap;
+
   @keyframes appear {
     from {
       opacity: 0;
