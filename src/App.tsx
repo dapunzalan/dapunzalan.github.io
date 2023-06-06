@@ -74,18 +74,14 @@ function App() {
                   enable: true,
                   mode: 'repulse',
                 },
-                onClick: {
-                  enable: true,
-                  mode: 'push',
-                },
               },
               modes: {
-                  repulse: {
-                      distance: 200,
-                  },
-                  push: {
-                      quantity: 4,
-                  },
+                repulse: {
+                    distance: 200,
+                },
+                push: {
+                    quantity: 4,
+                },
               },
             },
           }}
