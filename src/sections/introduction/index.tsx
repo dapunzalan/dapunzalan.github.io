@@ -83,7 +83,7 @@ const Introduction = () => {
             </Description>
           </Wrapper>
           <Wrapper delay="0.7s">
-            <AnimateTitle title="Dexter Ariel Punzalan" />
+            <AnimateTitle title="Dexter Ariel PUNZALAN." />
           </Wrapper>
           <Wrapper delay="0.8s">
             <Description

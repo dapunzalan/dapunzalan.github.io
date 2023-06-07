@@ -5,6 +5,7 @@ import Particles from 'react-particles'
 import Header from './components/Header'
 import Introduction from './sections/introduction'
 import './App.scss'
+import Skills from './sections/skills'
 
 function App() {
   const particlesInit = useCallback(async (engine: Engine) => {
@@ -23,7 +24,9 @@ function App() {
   return (
     <>
       <div className='app'>
+        <Header />
         <Particles
+          className='particles'
           id="tsparticles"
           init={particlesInit}
           loaded={particlesLoaded}
@@ -86,8 +89,8 @@ function App() {
             },
           }}
         />
-        <Header />
         <Introduction />
+        <Skills />
       </div>
     </>
   )

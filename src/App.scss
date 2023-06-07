@@ -1,4 +1,9 @@
 .app {
   max-width: 1480px;
   margin: 0 auto;
+
+  .particles {
+    z-index: -1;
+    position: fixed;
+  }
 }

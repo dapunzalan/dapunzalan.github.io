@@ -4,31 +4,15 @@ import { useAnimation, motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
 const Title = styled.h2`
-  font-size: 4.5rem;
+  font-size: 3rem;
   line-height: 1;
-
-  @media (min-width: 1200px) {
-    font-size: 5rem;
-  }
-
-  @media (min-width: 1600px) {
-    font-size: 6rem;
-  }
+  text-transform: uppercase;
 `;
 
 const Word = styled(motion.span)`
   display: inline-block;
   margin-right: 0.25em;
   white-space: nowrap;
-
-  &:last-child {
-    color: #03C988;
-    transition: all 0.3s;
-
-    &:hover {
-      transform: scale(1.2);
-    }
-  }
 `;
 
 const Character = styled(motion.span)`
@@ -36,7 +20,7 @@ const Character = styled(motion.span)`
   margin-right: -0.05em;
 `;
 
-const AnimateTitle = ({ title }: {title: string}) => {
+const Section = ({ title }: {title: string}) => {
   // Trigger when in view
   const ctrls = useAnimation();
 
@@ -109,4 +93,4 @@ const AnimateTitle = ({ title }: {title: string}) => {
   );
 }
 
-export default AnimateTitle
+export default Section

@@ -126,7 +126,7 @@ const Header = () => {
           </Wrapper>
           <Wrapper delay="0.6s">
             <AnchorItem
-              href="#"
+              href="#skills"
               offset="160"
             >
               Skills
