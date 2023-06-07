@@ -1,19 +1,21 @@
+export type TechnologyName = 'html'
+| 'css'
+| 'sass'
+| 'js'
+| 'ts'
+| 'react'
+| 'angular'
+| 'next'
+| 'vite'
+| 'electron'
+| 'storybook'
+| 'git'
+| 'aws'
+| 'graphql'
+
 export interface TechnologyProps {
   color?: `#${string}`
-  name: 'html'
-  | 'css'
-  | 'sass'
-  | 'js'
-  | 'ts'
-  | 'react'
-  | 'angular'
-  | 'next'
-  | 'vite'
-  | 'electron'
-  | 'storybook'
-  | 'git'
-  | 'aws'
-  | 'graphql' 
+  name: TechnologyName
 }
 
 Technology.defaultProps = {

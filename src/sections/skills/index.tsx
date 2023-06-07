@@ -1,8 +1,13 @@
 import SectionTitle from "../../components/SectionTitle"
-import { Technology } from "../../components/Icons"
+import { Technology, TechnologyName } from "../../components/Icons"
 import styles from './index.module.scss'
 
-const skills = [
+interface SkillProps {
+  icon: TechnologyName
+  label: string
+}
+
+const skills: SkillProps[] = [
   {
     icon: 'html',
     label: 'Html 5'
