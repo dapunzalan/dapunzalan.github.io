@@ -57,15 +57,14 @@
     text-align: center;
     gap: 50px;
 
-
     &__list {
       justify-content: center;
       gap: 12px;
       width: 100%;
 
       & > div {
-        height: 85px;
-        width: 95px;
+        height: 65px;
+        width: 75px;
       }
 
       & > div > svg {
