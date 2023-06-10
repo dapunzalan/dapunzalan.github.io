@@ -73,14 +73,7 @@ const Introduction = () => {
       <div className={styles.introduction__info}>
         <div>
           <Wrapper delay="0.6s">
-            <Description
-              ref={introRef}
-              initial="hidden"
-              animate={introCtrls}
-              variants={introVars}
-              >
-              Hello I'm
-            </Description>
+            <p>Hello I'm</p>
           </Wrapper>
           <Wrapper delay="0.7s">
             <AnimateTitle title="Dexter Ariel PUNZALAN." />

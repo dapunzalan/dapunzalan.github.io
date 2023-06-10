@@ -6,13 +6,16 @@ import { useInView } from 'react-intersection-observer';
 const Title = styled.h2`
   font-size: 3rem;
   line-height: 1;
-  text-transform: uppercase;
 `;
 
 const Word = styled(motion.span)`
   display: inline-block;
   margin-right: 0.25em;
   white-space: nowrap;
+
+  &:not(:first-child):last-child {
+    color: #03C988;
+  }
 `;
 
 const Character = styled(motion.span)`
@@ -66,7 +69,7 @@ const Section = ({ title }: {title: string}) => {
           <Word
             ref={ref}
             aria-hidden="true"
-            key={index}
+            key={word + index}
             initial="hidden"
             animate={ctrls}
             variants={wordAnimation}
@@ -79,7 +82,7 @@ const Section = ({ title }: {title: string}) => {
               return (
                 <Character
                   aria-hidden="true"
-                  key={index}
+                  key={character + index}
                   variants={characterAnimation}
                 >
                   {character}

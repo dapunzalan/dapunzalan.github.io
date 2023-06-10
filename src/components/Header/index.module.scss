@@ -1,5 +1,12 @@
 @import './../../assets/colors';
 
+.page__header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+}
 .header {
   display: flex;
   align-items: center;
@@ -71,6 +78,7 @@
       display: block;
       all: unset;
       cursor: pointer;
+      z-index: 4;
       will-change: filter;
       transition: filter 300ms;
       -webkit-tap-highlight-color: rgba(0,0,0,0);

@@ -14,15 +14,15 @@ const Nav = styled.nav`
   height: 100vh;
   left: 0;
   opacity: 1;
-  padding-top: 4rem;
-  position: absolute;
+  padding-top: 6rem;
+  position: fixed;
   pointer-events: auto;
   text-align: center;
   text-transform: uppercase;
   top: 0;
   transition: opacity 0.5s ease-out;
   width: 100%;
-  z-index: 9999;
+  z-index: 2;
 
   @media (min-width: 600px) {
     align-self: center;
@@ -107,48 +107,54 @@ const Header = () => {
   const [toggle, toggleMenu] = useReducer((value) => !value, false )
 
   return (
-    <div className={styles.header}>
-      <div className={styles.header__logo}>
-        <img src={myLogo} alt="My logo" />
-      </div>
-      <div className={styles.header__menu} onClick={toggleMenu}>
-        { toggle ? <Close /> : <Menu />}
-      </div>
-      <div className={[styles.header__links, toggle ? styles['header__links--is-show'] : ''].join(' ')}>
-        <Nav>
-          <Wrapper delay="0.5s">
-            <AnchorItem
-              href="#"
-              offset="160"
-            >
-              Me
-            </AnchorItem>
-          </Wrapper>
-          <Wrapper delay="0.6s">
-            <AnchorItem
-              href="#skills"
-              offset="160"
-            >
-              Skills
-            </AnchorItem>
-          </Wrapper>
-          <Wrapper delay="0.7s">
-            <AnchorItem
-              href="#"
-              offset="160"
-            >
-              Projects
-            </AnchorItem>
-          </Wrapper>
-          <Wrapper delay="0.8s">
-            <AnchorItem
-              href="#"
-              delay="0.8s"
-            >
-              Education
-            </AnchorItem>
-          </Wrapper>
-        </Nav>
+    <div className={styles.page__header}>
+      <div className={styles.header}>
+        <div className={styles.header__logo}>
+          <img src={myLogo} alt="My logo" />
+        </div>
+        <div className={styles.header__menu} onClick={toggleMenu}>
+          { toggle ? <Close /> : <Menu />}
+        </div>
+        <div className={[styles.header__links, toggle ? styles['header__links--is-show'] : ''].join(' ')}>
+          <Nav>
+            <Wrapper delay="0.5s">
+              <AnchorItem
+                onClick={toggleMenu}
+                href="#"
+                offset="160"
+              >
+                Me
+              </AnchorItem>
+            </Wrapper>
+            <Wrapper delay="0.6s">
+              <AnchorItem
+                onClick={toggleMenu}
+                href="#skills"
+                offset="160"
+              >
+                Skills
+              </AnchorItem>
+            </Wrapper>
+            <Wrapper delay="0.7s">
+              <AnchorItem
+                onClick={toggleMenu}
+                href="#"
+                offset="160"
+              >
+                Projects
+              </AnchorItem>
+            </Wrapper>
+            <Wrapper delay="0.8s">
+              <AnchorItem
+                onClick={toggleMenu}
+                href="#"
+                delay="0.8s"
+              >
+                Education
+              </AnchorItem>
+            </Wrapper>
+          </Nav>
+        </div>
       </div>
     </div>
   )

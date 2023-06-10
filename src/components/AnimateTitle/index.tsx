@@ -86,7 +86,7 @@ const AnimateTitle = ({ title }: {title: string}) => {
           <Word
             ref={ref}
             aria-hidden="true"
-            key={index}
+            key={word + index}
             initial="hidden"
             animate={ctrls}
             variants={wordAnimation}
@@ -99,7 +99,7 @@ const AnimateTitle = ({ title }: {title: string}) => {
               return (
                 <Character
                   aria-hidden="true"
-                  key={index}
+                  key={character + index}
                   variants={characterAnimation}
                 >
                   {character}

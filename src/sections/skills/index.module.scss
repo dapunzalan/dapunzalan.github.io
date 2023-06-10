@@ -2,29 +2,46 @@
 
 .skills {
   background-color: $black;
-  height: auto;
-  padding: 42px 16px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 16px;
+  padding: 100px;
+  display: grid;
+  place-items: center;
+  place-content: center;
+  grid-template-columns: 0.3fr 0.6fr;
+  gap: 200px;
+  height: 100vh;
 
   animation: appear 1s ease-out both;
   animation-delay: 2s;
 
   &__list {
     display: flex;
-    width: 48%;
-    justify-content: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
     gap: 24px;
-    margin-top: 16px;
-    text-align: center;
+    width: 80%;
+
+    & > div {
+      // background-color: $black;
+      // border: 1px solid $green-color;
+      // box-shadow: 0px 2px 14px 0px rgba($color: $green-color, $alpha: 0.4);
+      text-align: center;
+      display: grid;
+      grid-gap: 8px;
+      place-content: center;
+      place-items: center;
+      // height: 145px;
+      // width: 165px;
+      // cursor: pointer;
+      // transition: all 0.3s;
+
+      // &:hover {
+      //   transform: scale(1.2);
+      // }
+    }
 
     & > div > svg {
-      width: 48px;
-      height: 48px;
+      width: 64px;
+      height: 64px;
     }
 
     & > div > p {
@@ -33,10 +50,32 @@
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 780px) {
   .skills {
+    place-items: center;
+    grid-template-columns: none;
+    text-align: center;
+    gap: 50px;
+
+
     &__list {
+      justify-content: center;
+      gap: 12px;
       width: 100%;
+
+      & > div {
+        height: 85px;
+        width: 95px;
+      }
+
+      & > div > svg {
+        width: 48px;
+        height: 48px;
+      }
+
+      & > div > p {
+        display: none;
+      }
     }
   }
 }
